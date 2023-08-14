@@ -1,0 +1,23 @@
+.bgOrange{
+  background-color: rgb(226,107,10);
+}
+
+.bgBlue{
+  background-color: rgb(0,37,99) !important;
+}
+
+.bgSemiBlue{
+  background-color: rgb(220,230,241) !important; 
+}
+
+.textBlue{
+  color: rgb(51,51,153);
+}
+
+.textWhite{
+  color: white;
+}
+
+.textBlack{
+  color: black;
+}

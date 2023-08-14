@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="row">
+    <img class="col-4" src="./puntonetLogo.png" alt="logo">
+  </div>
+  <h1 class="bgOrange textWhite text-center mb-0 border-dark">Administración de Cambios - Implementación</h1>
+  <h2 class="bgBlue textWhite text-center border-dark">Responsable del cambio/Implementación</h2>
+
+  <h3 class="textBlue fw-bold mt-4">General</h3>
+
+  <div class="row justify-content-between ">
+        <div class="col-5">
+          <table class="table">
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-button-0 border-dark">Proyecto:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-button-0 border-dark">@Model.Proyecto.NombreProyecto</td>
+            </tr>
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Tipo Implementación:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.TipoImplementacion.Descripcion</td>
+            </tr>
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Ambiente:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Ambiente.Descripcion</td>
+            </tr>
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-dark">NrºTicket:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Implementacion.NroTicket</td>
+            </tr>
+        </table>
+        </div>
+
+
+        <div class="col-5">
+          <table class="table">
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Fecha de Solicitud:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Implementacion.FechaSolicitud.Value.ToShortDateString()</td>
+            </tr>
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Fecha Planificada Imp:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Implementacion.FechaPlanificada.Value.ToShortDateString()</td>
+            </tr>
+            
+            <tr>
+                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Solicitante:</th>
+                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.TecnicoSolicitante.NombreCompleto</td>
+            </tr>
+        </table>
+        </div>
+  </div>
+
+  <h3 class="textBlue mt-4">Descripción del Cambio</h3>
+  <div class="border border-top-2 border-button-2 border-dark bgSemiBlue">
+    <p class="mb-1">@Model.Implementacion.Descripcion</p>
+  </div>
+</body>
+</html>
