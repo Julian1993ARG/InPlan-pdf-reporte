@@ -102,7 +102,7 @@
     <div
       class="border border-top-2 border-button-2 border-dark bgSemiBlue text-center"
     >
-      <p class="mb-0 px-1 py-1">@Model.Implementacion.Descripcion</p>
+      <p class="mb-0 px-1 py-1"><b>Descripción:</b> @Model.Implementacion.Descripcion</p>
     </div>
 
     <div class="border border-top-0 border-button-2 border-dark text-center">
@@ -136,5 +136,17 @@
            }
        </tbody>
    </table>
+
+   <h3 class="bgBlue textWhite text-center fs-5 pb-1 mb-0 mt-4">
+    Consideraciones Posteriores
+    </h3>
+    <div
+      class="border border-top-2 border-button-2 border-dark bgSemiBlue text-center"
+    >
+      <p class="mb-0 px-1 py-1"><b>Consideraciones:</b> @Model.Implementacion.ConsideracionesPosteriores</p>
+    </div>
+
+  
+ </table>
   </body>
 </html>
