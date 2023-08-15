@@ -20,20 +20,20 @@
         <div class="col-5">
           <table class="table">
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-button-0 border-dark">Proyecto:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-button-0 border-dark">@Model.Proyecto.NombreProyecto</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-button-0 border-dark">Proyecto:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-button-0 border-dark">@Model.Proyecto.NombreProyecto</td>
             </tr>
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Tipo Implementación:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.TipoImplementacion.Descripcion</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-dark">Tipo Implementación:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-dark">@Model.TipoImplementacion.Descripcion</td>
             </tr>
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Ambiente:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Ambiente.Descripcion</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-dark">Ambiente:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-dark">@Model.Ambiente.Descripcion</td>
             </tr>
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-dark">NrºTicket:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Implementacion.NroTicket</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-dark">NrºTicket:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-dark">@Model.Implementacion.NroTicket</td>
             </tr>
         </table>
         </div>
@@ -42,25 +42,29 @@
         <div class="col-5">
           <table class="table">
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Fecha de Solicitud:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Implementacion.FechaSolicitud.Value.ToShortDateString()</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-dark">Fecha de Solicitud:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-dark">@Model.Implementacion.FechaSolicitud.Value.ToShortDateString()</td>
             </tr>
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Fecha Planificada Imp:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.Implementacion.FechaPlanificada.Value.ToShortDateString()</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-dark">Fecha Planificada Imp:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-dark">@Model.Implementacion.FechaPlanificada.Value.ToShortDateString()</td>
             </tr>
             
             <tr>
-                <th class="textWhite bgBlue ps-0 fw-normal border-dark">Solicitante:</th>
-                <td class="textBlack border bgSemiBlue ps-0 fw-normal border-dark">@Model.TecnicoSolicitante.NombreCompleto</td>
+                <th class="textWhite bgBlue ps-1 fw-normal border-dark">Solicitante:</th>
+                <td class="textBlack border bgSemiBlue ps-1 fw-normal border-dark">@Model.TecnicoSolicitante.NombreCompleto</td>
             </tr>
         </table>
         </div>
   </div>
 
-  <h3 class="textBlue mt-4">Descripción del Cambio</h3>
+  <h3 class="textBlue mt-4 fs-5">Descripción del Cambio</h3>
   <div class="border border-top-2 border-button-2 border-dark bgSemiBlue text-center">
     <p class="mb-0 px-1 py-1">@Model.Implementacion.Descripcion</p>
+  </div>
+  
+  <div class="border border-top-0 border-button-2 border-dark text-center">
+    <p class="mb-0 px-1 py-1"><b>Consideraciones previas:</b> @Model.Implementacion.ConsideracionesPrevias</p>
   </div>
 </body>
 </html>
