@@ -111,5 +111,30 @@
         @Model.Implementacion.ConsideracionesPrevias
       </p>
     </div>
+
+    <h3 class="textBlue mt-4 fs-5 mb-0">Detalle de la implementación</h3>
+    <h3 class="bgBlue textWhite text-center fs-5 pb-1 mb-0">
+      Pasos a seguir para implementar el cambio
+    </h3>
+
+    <table class="table table-bordered border-dark">
+      <thead class="bgOrange textWhite">
+          <tr>
+               <th>Orden</th>
+               <th>Descripción</th>
+               <th>Responsable</th>
+           </tr>
+      </thead>
+      <tbody>
+           @foreach(var tarea in Model.Detalles)
+           {
+               <tr>
+                   <td>@(tarea.Orden != null ? @tarea.Orden : "Sin orden")</td>
+                   <td>@tarea.DescripcionTarea</td>
+                   <td>@tarea.IdTecnicoResponsableNombreCompleto</td>
+               </tr>
+           }
+       </tbody>
+   </table>
   </body>
 </html>
